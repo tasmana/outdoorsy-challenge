@@ -1,0 +1,15 @@
+**/.project
+**/.classpath
+**/.settings
+**/.checkstyle
+**/.springBeans
+**/target
+**/.DS_Store
+**/.idea
+**/*.iml
+**/*.ucls
+**/.factorypath
+**/.sts4-cache
+**.crt
+.metadata/
+ignored/
