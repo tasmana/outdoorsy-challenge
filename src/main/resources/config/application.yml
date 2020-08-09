@@ -13,3 +13,7 @@ spring:
 rental:
   near:
     distance: 100
+
+stacktrace:
+  app:
+    packages:
