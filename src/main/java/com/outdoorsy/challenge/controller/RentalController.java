@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.outdoorsy.challenge.domain.Rental;
+import com.outdoorsy.challenge.aggregator.RentalAggregator;
+import com.outdoorsy.challenge.dto.RentalResponseDTO;
 import com.outdoorsy.challenge.dto.SearchRequestParameters;
-import com.outdoorsy.challenge.service.RentalService;
 
 @RestController
 @RequestMapping(value = "/campervans", produces = APPLICATION_JSON_VALUE)
 public class RentalController {
 
   @Autowired
-  private RentalService rentalService;
+  private RentalAggregator rentalAggregator;
 
   @GetMapping
   @ResponseBody
-  public Page<Rental> search(SearchRequestParameters searchRequestParameters, Pageable pageable) {
-    return rentalService.search(searchRequestParameters, pageable);
+  public Page<RentalResponseDTO> search(SearchRequestParameters searchRequestParameters, Pageable pageable) {
+    return rentalAggregator.search(searchRequestParameters, pageable);
   }
 }
