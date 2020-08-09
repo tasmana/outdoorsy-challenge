@@ -66,5 +66,5 @@ public class RentalResponseDTO {
   
   private String ownerAvatarUrl;
 
-  private List<RentalImage> rentalImages;
+  private List<RentalImage> images;
 }

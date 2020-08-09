@@ -1,7 +1,7 @@
 package com.outdoorsy.challenge.domain;
 
 import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.FetchType.LAZY;
+import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 import java.math.BigDecimal;
@@ -82,7 +82,7 @@ public class Rental {
   @Column
   private String ownerAvatarUrl;
 
-  @OneToMany(fetch = LAZY, cascade = ALL, orphanRemoval = true)
+  @OneToMany(fetch = EAGER, cascade = ALL, orphanRemoval = true)
   @JoinColumn(name="rental_id")
-  private List<RentalImage> rentalImages;
+  private List<RentalImage> images;
 }
