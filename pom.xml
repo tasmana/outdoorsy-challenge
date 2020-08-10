@@ -23,6 +23,7 @@
         <spring.boot.version>2.3.1.RELEASE</spring.boot.version>
         <guava.version>28.2-jre</guava.version>
         <sentry.version>1.7.30</sentry.version>
+        <logstash.logback.version>6.4</logstash.logback.version>
     </properties>
 
     <parent>
@@ -95,6 +96,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
             <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.logback.version}</version>
         </dependency>
 
         <dependency>
