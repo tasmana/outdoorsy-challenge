@@ -42,6 +42,7 @@ public class QueryFactory {
     if (rentalFilters.getNear() != null) {
       fromBuilder.append("*");
     } else {
+      //TODO Create a constant for haversine formula
       fromBuilder
           .append("(")
           .append(" SELECT *, (3959 * acos(cos(radians(:lat)) * cos(radians(lat)) * cos(radians(lng) - radians(:lng)) + sin(radians(:lat)) * sin( radians(lat)))) AS ")
