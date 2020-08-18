@@ -19,7 +19,7 @@ import com.outdoorsy.challenge.domain.Rental;
 import com.outdoorsy.challenge.dto.RentalResponseDTO;
 import com.outdoorsy.challenge.dto.SearchRequestParameters;
 import com.outdoorsy.challenge.exception.RentalNotFoundException;
-import com.outdoorsy.challenge.service.RentalService;
+import com.outdoorsy.challenge.service.SingleFilterRentalService;
 
 @ExtendWith(MockitoExtension.class)
 public class RentalAggregatorUnitTest {
@@ -30,7 +30,7 @@ public class RentalAggregatorUnitTest {
   private ModelMapper modelMapper;
 
   @Mock
-  private RentalService rentalService;
+  private SingleFilterRentalService rentalService;
 
   @InjectMocks
   private RentalAggregator rentalAggregator;

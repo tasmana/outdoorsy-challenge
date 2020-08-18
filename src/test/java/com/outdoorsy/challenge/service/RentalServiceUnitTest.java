@@ -40,7 +40,7 @@ public class RentalServiceUnitTest {
   private Pageable pageable;
 
   @InjectMocks
-  private RentalService rentalService;
+  private SingleFilterRentalService rentalService;
 
   @BeforeEach
   public void setup() {
